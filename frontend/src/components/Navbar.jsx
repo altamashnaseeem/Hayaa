@@ -76,20 +76,20 @@ const Navbar = () => {
         <img onClick={() => setVisible(true)} src={assets.menu_icon} className='w-5 cursor-pointer sm:hidden' alt="" />
       </div>
       {/* sidebarmenu for small screen  */}
-      <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full' : 'w-0'}`}>
+      <div className={`absolute top-0 right-0 bottom-0 z-10 overflow-hidden bg-white transition-all ${visible ? 'w-1/2' : 'w-0'}`}>
         <div className='flex flex-col text-gray-600'>
           <div onClick={() => setVisible(false)} className='flex items-center gap-4 p-3 cursor-pointer'>
             <img src={assets.dropdown_icon} className='h-4 rotate-180' alt="" />
             <p>Back</p>
           </div>
-          <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/'>HOME</NavLink>
-          <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/collection'>COLLECTION</NavLink>
-          <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/about'>ABOUT</NavLink>
-          <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/contact'>CONTACT</NavLink>
+          <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 text-sm border font-light' to='/'>HOME</NavLink>
+          <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border font-light text-sm' to='/collection'>COLLECTION</NavLink>
+          <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border font-light text-sm' to='/about'>ABOUT</NavLink>
+          <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border font-light text-sm' to='/contact'>CONTACT</NavLink>
           <div onClick={() => {
             handleAdminRedirect();
             setVisible(false);
-          }} className='py-2 pl-6 border cursor-pointer'>ADMIN</div>
+          }} className='py-2 pl-6 border cursor-pointer font-light text-sm'>ADMIN</div>
         </div>
       </div>
     </div>
