@@ -22,7 +22,7 @@ const Navbar = () => {
     const adminPassword = "admin"; // Replace with your actual admin password
     
     // Create a URL with query parameters
-    const adminLoginUrl = `http://localhost:5174/login?email=${encodeURIComponent(adminEmail)}&password=${encodeURIComponent(adminPassword)}&demo=true`;
+    const adminLoginUrl = `https://hayaa-admin.vercel.app/login?email=${encodeURIComponent(adminEmail)}&password=${encodeURIComponent(adminPassword)}&demo=true`;
     
     // Open the admin login page in a new tab
     window.open(adminLoginUrl, '_blank');
